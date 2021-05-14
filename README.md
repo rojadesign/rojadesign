@@ -1,0 +1,2 @@
+- 👋 Hi, I’m @rojadesign
+- 👀 I’m interested in technology, design, art and architecture. Software engineer at day, designer at night.
