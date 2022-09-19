@@ -5,6 +5,9 @@
 
 In short, I love software and hardware — and using this symbiosis to create code, design and art.
 
+[<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rojadesign&count_private=true&layout=default" align="right"/>](https://github.com/anuraghazra/github-readme-stats)
+<br />
+
 ---
 
 you can find me on
