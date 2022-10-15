@@ -1,7 +1,7 @@
 ### Hi, I’m Rush!
 
 > software engineer & designer.<br />
-> i push pixels to create light, shadow & fog.<br />
+> i push pixels and limits.<br />
 
 In short, I love software and hardware — and using this symbiosis to create code, design and art.
 
