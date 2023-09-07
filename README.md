@@ -1,19 +1,18 @@
 ### Hi, I’m Rush!
 
-> software engineer & designer.<br />
-> i push pixels and limits.<br />
+#### Website: https://www.rojadesign.com <br>
+#### Art & Design: https://www.instagram.com/rojadesign
 
-In short, I love software and hardware — and using this symbiosis to create code, design and art.
+> software engineer & designer. <br>
+> audiophile tech enthusiast.
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=rojadesign&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true)
+![rojadesign's Streak](https://github-readme-streak-stats.herokuapp.com/?user=rojadesign&theme=tokyonight&hide_border=false)
 <br />
 
 ---
 
-you can find me on
-
-- [rojadesign.com](https://www.rojadesign.com)
-- [instagram](https://www.instagram.com/rojadesign)
+you can also find me on
 - [linkedin](https://www.linkedin.com/in/rush-ali-24574b162/)
 - [dribbble](https://dribbble.com/rojadesign)
 - [youtube](https://www.youtube.com/rojadesign)
