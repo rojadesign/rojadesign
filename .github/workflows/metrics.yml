@@ -19,6 +19,7 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          email: "s0apii.ra@googlemail.com"
           
           # Options
           filename: metrics.svg
