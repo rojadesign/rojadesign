@@ -20,18 +20,17 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           output_action: none
-
-      - uses: lowlighter/metrics@latest
-        run: |
-          set +e
-          git checkout metrics-renders
-          git config user.name rojadesign
-          git config user.email s0apii.ra@googlemail.com
-          sudo mv /metrics_renders/* ./
-          git add --all
-          git commit -m "chore: push metrics"
-          git push
           
+          run: |
+            set +e
+            git checkout metrics-renders
+            git config user.name rojadesign
+            git config user.email s0apii.ra@googlemail.com
+            sudo mv /metrics_renders/* ./
+            git add --all
+            git commit -m "chore: push metrics"
+            git push
+            
           
 # Options
 #filename: metrics.svg
