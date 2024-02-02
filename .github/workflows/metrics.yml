@@ -24,6 +24,18 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           output_action: none
+          # Options
+          # filename: metrics.svg
+          user: rojadesign
+          base: header, activity, repositories, metadata
+          config_timezone: Europe/Paris
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_secrets: yes
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+          use_prebuilt_image: yes
+          # https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md
 
       - name: Push metrics
         run: |
