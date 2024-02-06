@@ -1,7 +1,7 @@
 name: Metrics
 on:
   # Schedule daily updates
-  schedule: [{cron: "0 5 * * *"}]
+  schedule: [{cron: "0 3 * * *"}]
   # (optional) Run workflow manually
   workflow_dispatch:
   # (optional) Run workflow when pushing on master/main
@@ -16,16 +16,12 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-    
-      - name: Run metrics action
-        uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          output_action: none
+          
           # Options
-          # filename: metrics.svg
+          filename: metrics.svg
           user: rojadesign
           base: header, activity, repositories, metadata
           config_timezone: Europe/Paris
@@ -37,13 +33,55 @@ jobs:
           use_prebuilt_image: yes
           # https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md
 
-      - name: Push metrics
-        run: |
-          set +e
-          git checkout metrics-renders
-          git config user.name rojadesign
-          git config user.email s0apii.ra@googlemail.com
-          sudo mv /metrics_renders/* ./
-          git add --all
-          git commit -m "[Github Action] chore: generate metrics"
-          git push
+# ----------------------------------------------------------
+# ----------------- PREVIOUS -------------------------------
+# ----------------------------------------------------------
+# name: Metrics
+# on:
+#   # Schedule daily updates
+#   schedule: [{cron: "0 5 * * *"}]
+#   # (optional) Run workflow manually
+#   workflow_dispatch:
+#   # (optional) Run workflow when pushing on master/main
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   github-metrics:
+#     runs-on: ubuntu-latest
+#     environment: 
+#       name: production
+#     permissions:
+#       contents: write
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#     
+#       - name: Run metrics action
+#         uses: lowlighter/metrics@latest
+#         with:
+#           token: ${{ secrets.METRICS_TOKEN }}
+#           output_action: none
+#           # Options
+#           # filename: metrics.svg
+#           user: rojadesign
+#           base: header, activity, repositories, metadata
+#           config_timezone: Europe/Paris
+#           plugin_achievements: yes
+#           plugin_achievements_display: detailed
+#           plugin_achievements_secrets: yes
+#           plugin_isocalendar: yes
+#           plugin_isocalendar_duration: half-year
+#           use_prebuilt_image: yes
+#           # https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md
+# 
+#       - name: Push metrics
+#         run: |
+#           set +e
+#           git checkout metrics-renders
+#           git config user.name rojadesign
+#           git config user.email s0apii.ra@googlemail.com
+#           sudo mv /metrics_renders/* ./
+#           git add --all
+#           git commit -m "[Github Action] chore: generate metrics"
+#           git push
